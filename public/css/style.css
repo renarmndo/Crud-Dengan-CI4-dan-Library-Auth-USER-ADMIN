@@ -1,0 +1,32 @@
+/* styles.css */
+body {
+  padding-top: 56px; /* Height of the fixed navbar */
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure sidebar appears above content */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  transition: width 0.3s ease; /* Add transition effect for width changes */
+}
+
+/* Adjust this value according to your layout */
+.content {
+  margin-left: 250px; /* Set the margin to the width of the sidebar */
+  padding-top: 20px;
+  transition: margin-left 0.3s ease; /* Add transition effect for margin-left changes */
+}
+
+/* When the screen size is reduced, make the sidebar smaller and hide the text */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 0;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
